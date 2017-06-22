@@ -40,3 +40,15 @@ function score(grade){
     };
     return grade_score_mapping[grade];
 }
+
+class SubMarks {
+    constructor(name, marks, total, credits){
+        this.name = name;
+        this.scores = score(grade(scaleTo100(marks, total)));
+        this.credits = credits;
+    }
+
+    get cg() {
+        return this.credits * this.scores;
+    }
+}
