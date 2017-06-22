@@ -1,6 +1,6 @@
 function grade(score){
     if (score < 0)
-        throw -1;
+        throw new Error("Grade cannot be negative");
     if (score >= 95 && score <=100)
         return 'AP';
     else if (score >= 85 && score < 95)
