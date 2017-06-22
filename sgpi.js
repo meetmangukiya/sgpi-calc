@@ -20,3 +20,8 @@ function grade(score){
     else if (score >= 0 && score < 40)
         return 'FF';
 }
+
+function scaleTo100(score, total){
+    var multiplying_factor = 100 * total;
+    return score * multiplying_factor;
+}
