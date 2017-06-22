@@ -25,3 +25,18 @@ function scaleTo100(score, total){
     var multiplying_factor = 100 * total;
     return score * multiplying_factor;
 }
+
+function score(grade){
+    var grade_score_mapping = {
+        'AP': 10,
+        'AA': 10,
+        'AB': 9,
+        'BB': 8,
+        'BC': 7,
+        'CC': 6,
+        'CD': 5,
+        'DD': 4,
+        'FF': 0
+    };
+    return grade_score_mapping[grade];
+}
