@@ -52,3 +52,14 @@ class SubMarks {
         return this.credits * this.scores;
     }
 }
+
+function sgpi(marks){
+    var credits = 0;
+    var cgs = 0;
+    for(var i = 0; i < marks.length; i++){
+        var mark = marks[i];
+        credits += mark.credits;
+        cgs += mark.cg();
+    }
+    return cgs / credits;
+}
